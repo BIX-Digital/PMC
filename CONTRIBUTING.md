@@ -10,6 +10,7 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 
 [How to contribute](#how-to-contribute)
 
+
 ## How to setup
 * Fork all relevant repositories into your GitHub account.
 * Clone the repositories from either your fork or the OpenDevStack GitHub repository.
@@ -29,6 +30,7 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
   git push -u bitbucket-opendevstack master
   ```
 * Create an *ods-configuration* repo that contains all property values (e.g. Nexus URL) on Bitbucket. See the *ods-configuration-sample* example repo on GitHub for more information.
+
 
 ## How to update
 * Checkout master.
@@ -55,7 +57,8 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
   git push master bitbucket-opendevstack/master
   # -> Create PR on Bitbucket *master* to *production*
 ```
-
+  
+  
 
 ## How to contribute
 * Create a branch.
@@ -83,8 +86,8 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 **Git Example:**
 ```sh
   git checkout -b fix/typo
-  git push bitbucket-opendevstack/fix/typo fix/typo
+  git push bitbucket-opendevstack fix/typo
   # -> Create PR on Bitbucket based on *fix/typo* got approved  
-  git push github-<your_github_account_name>/fix/typo fix/typo 
+  git push github-<your_github_account_name> fix/typo 
   # -> Create PR *github-<your_github_account_name>/fix/typo* to *github-opendevstack/master*
 ```
