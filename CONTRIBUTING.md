@@ -8,21 +8,26 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 
 [How to setup](#how-to-setup)
 
-[How to update](#how-to-update)
+[How to update](#how-to-update-from-github.com/opendevstack)
 
 [How to contribute](#how-to-contribute)
 
 
+
+
 ## Prerequisites
-* All repos are created on your Bitbucket server (see [Getting Started](https://github.com/opendevstack) guide)
+* All repos are created on your Bitbucket server (see [Getting Started](https://github.com/opendevstack) guide).
+* Please note that master and all other from OpenDevStack derived tags need to stay clean at each point in time.
+
 
 
 ## How to setup
-* Clone the relevant repository from Bitbucket
 
-* Fork repo on OpenDevStack GitHub to namespace you own (following referred to as <YOUR_GITHUB_ACCOUNT_NAME>)
+* Clone the relevant repository from Bitbucket.
 
-* Add the github/opendevstack master as a remote called '*github-opendevstack*', your fork as '*github-<YOUR_GITHUB_ACCOUNT_NAME>*' as well as the repo on Bitbucket as '*bitbucket-opendevstack*'
+* Fork repo on OpenDevStack GitHub to namespace you own (following referred to as *<YOUR_GITHUB_ACCOUNT_NAME>*).
+
+* Add the github/opendevstack master as a remote called '*github-opendevstack*', your fork as '*github-<YOUR_GITHUB_ACCOUNT_NAME>*' as well as the repo on Bitbucket as '*bitbucket-opendevstack*'.
   ```sh
   git remote add github-opendevstack https://github.com/opendevstack/<REPO_NAME>.git
   git remote add github-<YOUR_GITHUB_ACCOUNT_NAME> https://github.com/<YOUR_GITHUB_ACCOUNT_NAME>/<REPO_NAME>.git
@@ -30,7 +35,9 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
   ```
 
 
-## How to update
+
+## How to update from github.com/opendevstack
+
 * Checkout master.
 ```sh
   git checkout master
@@ -41,12 +48,11 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
   git fetch github-opendevstack
 ```
 
-* Merge '*github-opendevstack/master*' or a certain tag into your local master.
+* Merge '*github-opendevstack/master*' into your local master.
 ```sh
   git merge github-opendevstack
-  # or for tag e.g.:
-  git merge github-opendevstack/1.1
 ```
+​       Alternatively merge a certain tag into a local tag branch
 
 * Push the merged changes from your local master to '*github-<YOUR_GITHUB_ACCOUNT_NAME>/master*' remote. (Optional)
 ```sh
@@ -58,12 +64,14 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
   git push bitbucket-opendevstack master
 ```
 
-* Create a Pull Request on Bitbucket master to production branch for the changes we pushed to master in the previous step.
+* Create a Pull Request on Bitbucket master to production branch for the changes we pushed to master in the previous step. This serves as a gate to control changes coming in, and spread knowledge about what has changed exactly.
 
 * Check the changelog for anything to update/reinstall via change-scripts, new ods-configuration properties etc. and do it.
   
 
+
 ## How to contribute
+
 * Create a branch from master.
   ```sh
   git checkout master
@@ -72,10 +80,12 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 
 * Make your code changes in this branch.
 
-* After finishing, push this branch to bitbucket-opendevstack
+* After finishing, push this branch to bitbucket-opendevstack.
   ```sh
   git push bitbucket-opendevstack <BRANCH_NAME>
   ```
+  
+* Test your changes by pointing OpenShift to this branch.
   
 * Create a PR on Bitbucket targeting the production branch and wait until it gets approved and merge it.
 
