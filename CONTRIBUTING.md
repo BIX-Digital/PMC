@@ -8,7 +8,7 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 
 [How to setup](#how-to-setup)
 
-[How to update](#how-to-update-from-github.com/opendevstack)
+[How to update from github.com/opendevstack](#how-to-update-from-github.com/opendevstack)
 
 [How to contribute](#how-to-contribute)
 
@@ -39,30 +39,29 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 ## How to update from github.com/opendevstack
 
 * Checkout master.
-```sh
+  ```sh
   git checkout master
-```
+  ```
 
 * Fetch updates from '*github-opendevstack*' remote.
-```sh
+  ```sh
   git fetch github-opendevstack
-```
+  ```
 
-* Merge '*github-opendevstack/master*' into your local master.
-```sh
+* Merge '*github-opendevstack/master*' into your local master. Alternatively merge a certain tag into a local tag branch.
+  ```sh
   git merge github-opendevstack
-```
-​       Alternatively merge a certain tag into a local tag branch
+  ```
 
 * Push the merged changes from your local master to '*github-<YOUR_GITHUB_ACCOUNT_NAME>/master*' remote. (Optional)
-```sh
+  ```sh
   git push github-<YOUR_GITHUB_ACCOUNT_NAME> master
-```
+  ```
 
 * Push the merged changes from your local master to '*bitbucket-opendevstack/master*' remote.
-```sh
+  ```sh
   git push bitbucket-opendevstack master
-```
+  ```
 
 * Create a Pull Request on Bitbucket master to production branch for the changes we pushed to master in the previous step. This serves as a gate to control changes coming in, and spread knowledge about what has changed exactly.
 
