@@ -6,6 +6,8 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 
 [Prerequisites](#prerequisites)
 
+[Notes](#notes)
+
 [How to setup](#how-to-setup)
 
 [How to update from github.com/opendevstack](#how-to-update-from-github.com/opendevstack)
@@ -17,7 +19,12 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 
 ## Prerequisites
 * All repos are created on your Bitbucket server (see [Getting Started](https://github.com/opendevstack) guide).
-* Please note that master and all other from OpenDevStack derived tags need to stay clean at each point in time.
+
+
+## Notes
+* Please note that all masters and all other from OpenDevStack derived tags need to stay clean at each point in time.
+
+* OpenShift and Rundeck must be configured to point to the production branch.
 
 
 
