@@ -22,9 +22,7 @@ The following is a set of guidelines for contributing to [OpenDevStack](https://
 
 
 ## Notes
-* Please note that all masters and all other from OpenDevStack derived tags need to stay clean at each point in time.
-
-* OpenShift and Rundeck must be configured to point to the production branch.
+Please note that all masters and all other from OpenDevStack derived tags need to stay clean at each point in time. OpenShift and Rundeck are configured to point to the production branch, where you can make changes.
 
 
 
